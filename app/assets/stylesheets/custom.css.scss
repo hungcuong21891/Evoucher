@@ -1,0 +1,517 @@
+@import "bootstrap";
+
+body{
+	background-color:  #424242;
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #fff;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto 0px;
+}
+
+/* to make dropdown by hover instead of click */
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+
+/*menu*/
+.navbar
+{
+	margin-bottom: 0px;
+}
+
+.navbar-inverse .navbar-inner
+{
+  background-image: linear-gradient(to bottom, #80b53f, #80b53f);
+}
+  
+.navbar-fixed-top
+{
+	border-width: 0px;
+}
+
+.navbar-inner
+{
+  
+  border-style: none;
+	height:50px;
+	.container{
+		height:50px;
+		.nav{
+			height: 50px;
+      /* user navigation*/
+			.dropdown#user_nav{
+        /*border of user nav*/
+				border-left: solid 1px #777777;
+				width: 50px;
+				height: 50px;
+
+				.dropdown-toggle{
+					padding: 0px 15px 0px 10px;
+					height: 50px;
+					img{
+            margin-top: 10px;
+						width: 30px;
+						height: 30px;
+					}
+				}
+
+        .dropdown-menu{
+          width: 260px;
+          color: #fff;
+          li{
+            line-height: 20px;
+            a{
+            font-weight: 500;
+           }
+          }
+
+          li#social
+          {
+            a:hover,a:focus{
+              background-color: #212121;
+              background-image: none;
+            }
+          }
+        }
+			}
+
+      .dropdown#user_nav_not{
+        /*border of user nav*/
+        border-left: solid 1px #777777;
+        width: 50px;
+        height: 50px;
+
+        .dropdown-toggle{
+          padding: 0px 15px 0px 10px;
+          height: 50px;
+          img{
+            margin-top: 10px;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .dropdown-menu{
+          width: 330px;
+          color: #fff;
+          li{
+            line-height: 20px;
+            span{
+              padding-left: 45px;
+            }
+            span#signup{
+              padding-left: 0px;
+            }
+            span#signin{
+              padding-left: 25px;
+            }
+            a{
+              font-weight: 500;
+              img#email-image{
+
+                margin-right: 0px;
+                height: 46px;
+                vertical-align: bottom;
+              }
+              img#password-image{
+                
+                margin-right: 0px;
+                height: 46px;
+                vertical-align: top;
+              }
+              input{
+                margin: 0px 0px 0px 0px;
+                width:230px;
+              }
+              label{
+                padding-left: 35px;
+              }
+
+              button.btn{
+
+                background: #80b53f url("/assets/arrow-right.png") no-repeat center;
+                margin-bottom: 10px;
+                margin-top: 0px;
+                height: 45px;
+                width: 45px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                 border-radius: 0px;
+                 border-style: none;
+              }
+            }
+            a:hover, a:focus
+
+
+            {
+              background-color: #212121;
+              background-image: none;
+              text-decoration: none;
+            }
+          }
+          li#social
+          {
+            a:hover,a:focus{
+              background-color: #212121;
+              background-image: none;
+            }
+          }
+        }
+      }
+
+
+      /*category navigation*/
+      .dropdown#category_nav{
+        width: 150px;
+        height: 50px;
+        background-color: #424242;
+        font-size: 20px;
+        /*text vertical align*/
+        line-height: 50px;
+        
+        .dropdown-toggle{
+          padding: 0px 15px 0px 10px;
+          height: 50px;
+          text-align: center;
+
+        }
+        .dropdown-menu{
+          color: #fff;
+          margin-left: -50px;
+          width: 300px;
+          font-size: 15px;
+          li{
+            a{
+            font-weight: 600;
+            }
+          }
+        }
+
+      }
+      .dropdown#category_nav:hover{
+        background-color: #212121;
+      }
+
+
+      /*location navigaton*/
+
+
+		}
+	}
+}
+
+/*form for signup*/
+form.signin-form{
+  input{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: #000;
+    color: #fff;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #fff; }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #fff; }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+    color: #fff; }
+  input#email-signin{
+    padding-bottom: 0px;
+    height: 40px;
+    vertical-align: bottom;
+  }
+  input#password-signin{
+    padding-top: 0px;
+    height: 40px;
+    vertical-align: top;
+  }
+  input.notactive{
+    background-color: #424242;
+    border-color:  #424242;
+    color: #333232;
+  }
+  input.notactive:-moz-placeholder,
+  textarea.notactive:-moz-placeholder {
+
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #333232; }
+  input.notactive:-ms-input-placeholder,
+  textarea.notactive:-ms-input-placeholder {
+
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #333232; }
+  input.notactive::-webkit-input-placeholder,
+  textarea.notactive::-webkit-input-placeholder {
+
+    font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+    color: #333232; }
+  margin-bottom: 0px;
+}
+
+
+/*search navigation*/
+form.well{
+  /*border thang, khogn cong*/
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 50px;
+  border-style: none;
+  background-color: #212121;
+  input{
+    font-size: 20px;
+    line-height: 30px;
+    height: 50px;
+    padding: 0px 0px 0px 20px;
+    border-style: none;
+    background-color: #212121;
+    color: #80b53f;
+    margin: 0px;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+  font-size: 25px;
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #80b53f; }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+  font-size: 25px;
+  font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+  color: #80b53f; }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-size: 25px;
+    font-family:"Myriad Pro",PTSansCaptionRegular, arial, helvetica, sans-serif;
+    color: #80b53f; }
+  button{
+    height: 50px;
+  }
+  /*Giu yen vi tri cua icon search */
+  button:hover,:focus{
+    background-position: 0px;
+  }
+}
+
+.navbar .btn#icon-search{
+  margin: 0px;
+  background-image: url("/assets/search_green.png");
+  width: 50px;
+  background-color: #212121;
+  border-left: solid 1px #80b53f;
+
+
+}
+
+.navbar .btn#icon-search:hover{
+  background-color: #1a1919;
+}
+
+
+.navbar .btn.key{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+
+
+
+
+/*dropdown of search bar has caret*/
+.navbar .nav.pull-right > li > .dropdown-menu::after, 
+.navbar .nav.pull-right > li > .dropdown-menu::before {
+  display:block;
+}
+
+
+/*search navigation dropdown menu*/
+.navbar .nav.pull-right > li > .dropdown-menu
+{
+  margin-top: 1px;
+  width: 285px;
+  color: #fff;
+  li{
+    padding-left: 20px;
+    line-height: 40px;
+    
+  }
+  li#title{
+    background-color: #292929;
+    height: 40px;
+    font-size: 17px;
+  }
+  li.key{
+    min-height: 100px;
+  }
+
+}
+
+.navbar .nav > li > .dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 140px;
+}
+
+.navbar .nav >li>.dropdown-menu:after{
+  content:'';
+  display:inline-block;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-bottom:6px solid #212121;
+  position:absolute;
+  right: 140px;  
+}
+
+.dropdown-menu {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+	background-color: #212121;
+	border-style: none;
+	padding: 0px;
+	margin: 0px;
+  li{
+    
+    line-height: 60px;
+
+    a{
+      color: #fff;
+      height: 60px;
+      padding: 0px 0px 0px 0px;
+      line-height: 60px;
+      
+      img {
+        height: 30px;
+        margin-right: 15px;
+        margin-left: 18px;
+      }
+      /*This help li have 2 lines*/
+      span {
+        vertical-align:middle; 
+        display:inline-block; 
+        line-height:1.7;
+        div.li-line2{
+          font-size: 11px;
+          font-weight: normal;
+          color: #636363;
+        }
+      }
+    }
+  }
+
+}
+
+.dropdown-menu .divider {
+  background-color:  #2e2e2e;
+}
+
+/*change color of link in dropdown menu*/
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus{
+  background-color: #80b53f;
+  background-image: none;
+}
+
+/*color of user nav */
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle
+{
+  background-color: #212121;
+}
+
+.nav > li > a:hover, .nav > li > a:focus
+{
+	background-color: #80b53f;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+	background-color: #212121;
+
+}
+
+.nav > li > ul > li>a:hover
+{
+  background-color: #80b53f;
+}
+
+.dropdown-menu .divider {
+  margin: 0px;
+  border-style: none;
+}
+
+
+
+/*To remove the caret when dropdown*/
+.navbar .nav > li > .dropdown-menu::after, 
+.navbar .nav > li > .dropdown-menu::before {
+  display:none;
+}
+
+#user_nav:hover{
+  background-color: #212121;
+}
+
+#user_nav_not:hover{
+  background-color: #212121;
+}
+
+#category_nav:hover{
+  background-color: #212121;
+}
+
+/*Change font color of category*/
+#category_nav > a{
+  color: #80b53f;
+}
+/*content*/
+
+.web-body
+{
+	 margin-top: 120px;
+}
+
+
+/*footer*/
+#push{
+  height: 240px;
+}
+#footer-top{
+  height: 60px;
+  background-color: #232323;
+  line-height: 60px;
+  p{
+    margin: 0px 0px 0px 20px;
+  }
+}
+
+#footer-bot{
+  height: 180px;
+  background-color:  #80b53f;
+}
+
+@media (max-width: 767px) {
+#footer {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+}

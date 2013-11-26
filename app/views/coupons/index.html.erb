@@ -1,0 +1,6 @@
+<% @coupons.each do |coupon| %> 
+<%= coupon["title"] %>
+<% q = make_permalink(coupon['title'] + '-' + coupon['itemID'].to_s) %>
+<td><%= link_to 'Chi tiết', :action => 'show', :id => q %></td>
+</br>
+<% end %>

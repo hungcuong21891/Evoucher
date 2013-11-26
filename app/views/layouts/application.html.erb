@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Coupon</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+  <div id="wrap">
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav">
+          <% if true%>
+          <li class="dropdown" id="user_nav">
+            <!-- remove data-toggle="dropdown" to prevent click effect -->
+            <a href="#" class="dropdown-toggle"> <img src="/assets/user.png" alt="" />  
+            </a>  
+            <ul class="dropdown-menu">  
+              <li>
+                <a href="#"><img src="/assets/anonymous.png" alt="" /> <span>1bannamgiauten<br /><div class="li-line2">Hà Nội</div></span></a></li>
+              <li class="divider"></li>
+              <li>
+                <a href="#"><img src="/assets/heart.png" alt="" /> <span>Yêu thích<br/><div class="li-line2">Đang theo dõi: 17 cuporn</div></span></a></li>
+              <li class="divider"></li>
+              <li>
+                <a href = #><img src="/assets/close.png" alt="" /> Đăng xuất</a></li>
+              <li class="divider"></li>
+              <li id="social">
+                <span><a href="http://facebook.com"><img src="/assets/fb.png" alt="" /></a> <a href=#><img src="/assets/twitter.png" alt="" /></a><a href=#><img src="/assets/pinterest.png" alt="" /></a><a href=#><img src="/assets/google.png" alt="" /></a></span> </li>
+              
+            </ul>  
+          </li>
+          <% else %>
+          <li class="dropdown" id="user_nav_not">
+            <!-- remove data-toggle="dropdown" to prevent click effect -->
+            <a href="#" class="dropdown-toggle"> <img src="/assets/whiteline.png" alt="" />  
+            </a>  
+            <ul class="dropdown-menu">
+            <form class="signin-form">   
+              <li><a><img id="email-image"src="/assets/sign-in.png"><input type="text" autofocus="true" class = "span3" id="email-signin" placeholder='Email' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" /></input></a></li>
+              
+              <li><a><img id="password-image"src="/assets/password-notactive.png"><input type="password" class = "span3 notactive" id="password-signin" placeholder='Mật khẩu' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mật khẩu'" /></input></a></li>
+              
+              <li><span id = "signin"><a><input type="checkbox" class="css-checkbox" id="checkbox19" checked="checked" />
+            <label for="checkbox19" name="checkbox19_lbl" class="css-label dark-check-green">Ghi nhớ mật khẩu</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn"></button></a></span></li>
+
+            </form>
+              <li class="divider"></li>
+              <li><span id="signup"><a><img src="/assets/circle.png" alt="" />Đăng ký&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href=#><img src="/assets/right.png" alt=""/></a></a></span></li>
+               <li class="divider"></li>
+              <li><span><a href="http://facebook.com"><img src="/assets/fb.png" alt="" /></a> <a href=#><img src="/assets/twitter.png" alt="" /></a><a href=#><img src="/assets/pinterest.png" alt="" /></a><a href=#><img src="/assets/google.png" alt="" /></a></span> </li>
+            </ul>  
+          </li>
+          <% end %>
+          <li class="dropdown" id="category_nav">
+            <a href="/" class="dropdown-toggle"> <b>CUPORN</b>
+            </a>  
+            <ul class="dropdown-menu">  
+              <li><a href="#">Thời trang</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Ẩm thực</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Địa điểm giải trí</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Đồ gia dụng</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Đồ điện tử</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Spa|làm đẹp</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Đồ trẻ em|đồ chơi</a></li>
+               <li class="divider"></li>
+             
+            </ul>  
+          </li>
+
+          <!-- <li class="dropdown" id="location_nav">
+            <a href="#" class="dropdown-toggle"> CHỌN ĐỊA ĐIỂM CỦA BẠN
+            </a>  
+            <ul class="dropdown-menu">  
+              <li>Đàm Quang Trung</li>
+              <li class="divider"></li>
+              <li>Yêu thích</li>
+              <li class="divider"></li>
+              <li>Đăng xuất</li>
+              <li class="divider"></li>
+              <li>FB</li>
+              
+            </ul>  
+          </li> -->
+        </ul>
+
+        <ul class="nav pull-right">
+         <li class="dropdown" id="search_nav">
+
+          <form class="well" action="/coupons" method="get">
+            <input type="text" class = "span3 search-form" placeholder='search' onfocus="this.placeholder = ''" onblur="this.placeholder = 'search'" /> 
+            </input>
+            <button type="submit" class="btn btn-inverse" id="icon-search"></button>
+          </form>
+          <ul class="dropdown-menu">  
+            <li id="title">Từ khóa được tìm kiếm nhiều nhất</li>
+            <li><input type="button" class="btn key" value="phim 18+"/><input type="button" class="btn key" value="quán ăn ngon"/>
+              <input type="button" class="btn key" value="vé xem phim giá rẻ"/></li>
+          </ul>
+        </li>
+          
+        </ul>
+      </div>
+    </div>   
+  </header>
+
+  <div class="container web-body" >
+    <!--  <%= debug(params) if Rails.env.development? %> -->
+
+
+    <%= yield %>
+
+  </div>
+  <div id="push"></div>
+  </div>
+  <div id="footer-top">
+    <div class="container">
+      <p>CUPORN | MUA GÌ HÔM NAY</p>
+    </div>
+  </div>
+   <div id="footer-bot">
+    <div class="container">
+       <div class="row">
+        <div class="span2">
+          Tài khoản
+        </br>
+        Đăng ký
+        </div>
+        <div class="span2">
+          Dịch vụ
+        </div>
+         <div class="span3">
+          Hướng dẫn sử dụng
+        </div>
+        <div class="span3">
+          Gian hàng
+        </div>
+        <div class="span2">
+         Tùy chỉnh
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

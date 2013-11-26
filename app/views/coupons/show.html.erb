@@ -1,0 +1,12 @@
+<% @coupons.each do |coupon| %> 
+
+	<%= coupon["title"] %>
+	<%= coupon["url"] %>
+	<%=  coupon["hash"] %>
+	<%= coupon["oldPrice"] %>
+	<%= coupon["price"] %>
+<% end %>
+
+</br>
+<%= link_to 'Quay lại', root_url %>
+
